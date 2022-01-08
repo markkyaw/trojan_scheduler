@@ -1,8 +1,8 @@
-# USC Schedule Picker
+# Trojan Scheduler
 
 ## About
 
-USC Schedule Picker lets users input in the classes they're interested in registering and return a list of possible combination of classes they can take with minimum amount of conflicts
+Trojan Scheduler lets users input in the classes they're interested in registering and return a list of possible combination of classes they can take with minimum amount of conflicts
 
 ## Getting Started
 
@@ -25,11 +25,12 @@ USC Schedule Picker lets users input in the classes they're interested in regist
 6. Installing dependencies -- this will install all the dependencies to your virtual environment
    - `pip install -r requirements.txt`
 7. Setting up pre-commit
-- run `pre-commit install` to set up git hook scripts 
-	- what this does is it runs the the scripts specified in `.pre-commit-config.yaml` whenever you commit so it formats the code nice and beautiful so it's consistent across everyone
-- then run `pre-commit run --all-files` to make sure it works properly
+   - run `pre-commit install` to set up git hook scripts
+     - what this does is it runs the the scripts specified in `.pre-commit-config.yaml` whenever you commit so it formats the code nice and beautiful so it's consistent across everyone
+   - then run `pre-commit run --all-files` to make sure it works properly
 
 ## Tech Stack
 
 Backend: Django
-Frontend: React
+
+Frontend: Django HTML
