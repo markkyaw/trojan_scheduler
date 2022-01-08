@@ -4,7 +4,6 @@ from apps.classes.models import BasicClassInfo
 
 
 class BasicClassInfoSerializer(serializers.ModelSerializer):
-	class Meta:
-		model = BasicClassInfo
-		fields = '__all__'
-
+    class Meta:
+        model = BasicClassInfo
+        fields = "__all__"

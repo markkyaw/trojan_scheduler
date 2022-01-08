@@ -10,10 +10,10 @@ from apps.classes.models import BasicClassInfo
 
 
 class BasicClassInfoView(GenericAPIView):
-	serializer_class = BasicClassInfoSerializer
+    serializer_class = BasicClassInfoSerializer
 
-	def get(self, request, format=None):
-		return_status = status.HTTP_200_OK
-		ret = BasicClassInfoSerializer(BasicClassInfo.objects.get(id=1)).data
+    def get(self, request, format=None):
+        return_status = status.HTTP_200_OK
+        ret = BasicClassInfoSerializer(BasicClassInfo.objects.get(id=1)).data
 
-		return Response(ret, return_status)
+        return Response(ret, return_status)

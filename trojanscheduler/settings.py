@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     "apps",
     "apps.users",
     "apps.classes",
-	"behave_django",
+    "behave_django",
 ]
 
 MIDDLEWARE = [
