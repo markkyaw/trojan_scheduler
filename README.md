@@ -34,3 +34,20 @@ Trojan Scheduler lets users input in the classes they're interested in registeri
 Backend: Django
 
 Frontend: Django HTML
+
+## Recommended Stuff
+
+- Code Editor: VSCode or PyCharm (I'm used to using VSCode)
+  - If you're using VSCode these are the extensions I recommend:
+    - Django by Baptiste Darthenay - cuz we using Django
+    - Git History by Don Jayamanne - lets you see git commit history in vscode
+    - GitLens by GitKraken - so you know who wrote which big brain code
+    - MagicPython by MagicStack - see below
+    - Pylance, Python, VS IntelliCode by Microsoft - tbh idk which is better i just have them all lol
+    - Cucumber by Alexander Krechik - for writing tests so we become Test Driven Development
+    - Code Spell Checker by Street Side Software - helps prevent whoopsies of spelling wrong variable names
+    - vscode-icons by VSCode Icons Team or Material Icon Theme by Philipp Kief (prettier icons for your code editor)
+- [SourceTree](https://www.atlassian.com/software/sourcetree) - git GUI if you don't wanna deal with terminal stuff
+- [iTerm2](https://iterm2.com/) - A better terminal (Note: Mac OS Only)
+- [Postman](https://www.postman.com/) - Test out APIs
+- [Powerlevel10k](https://github.com/romkatv/powerlevel10k) - Makes terminal better (Note: Unix terminals only)
