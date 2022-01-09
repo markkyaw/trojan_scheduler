@@ -8,7 +8,7 @@ Trojan Scheduler lets users input in the classes they're interested in registeri
 
 1. Run Server
    - run `./run-server.sh` to get your backend running
-   - Note: If you're on Windows, open `./run-server.sh` and change from `python3` to `python`
+   - Note: If you're on Windows, open `run-server.sh` and change from `python3` to `python`
 
 ## Getting Started
 
