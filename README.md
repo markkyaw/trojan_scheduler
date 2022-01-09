@@ -4,6 +4,12 @@
 
 Trojan Scheduler lets users input in the classes they're interested in registering and return a list of possible combination of classes they can take with minimum amount of conflicts
 
+## Commands
+
+1. Run Server
+   - run `./run-server.sh` to get your backend running
+   - Note: If you're on Windows, open `./run-server.sh` and change from `python3` to `python`
+
 ## Getting Started
 
 1. Install Python3 from [here](https://www.python.org/downloads/)
