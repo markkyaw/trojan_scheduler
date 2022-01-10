@@ -28,6 +28,11 @@ Note: For all commands, Windows users will use `python` / `pip` while Mac users 
    - `python3 manage.py migrate`
 6. Run code coverage
    - Coming soon
+7. Debugging
+   - `import pdb; pdb.set_trace()`
+     - this is basically `gdb` equivalent in python. Use this when testing your code as you're developing features/debugging
+   - `import sys, pdb; pdb.Pdb(stdout=sys.__stdout__).set_trace()`
+     - Use this to debug the test files when test cases are failing
 
 ## Getting Started
 
