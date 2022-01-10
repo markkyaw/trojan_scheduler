@@ -4,23 +4,39 @@
 
 Trojan Scheduler lets users input in the classes they're interested in registering and return a list of possible combination of classes they can take with minimum amount of conflicts
 
-## Commands
+## Common Commands
 
-1. Run Server
+Note: For all commands, Windows users will use `python` / `pip` while Mac users will use `python3` / `pip3` . Since I'm on Mac I'll only type Mac commands
 
-- Windows:
-  - run `./run-server.bat`
-- Mac:
-  - run `./run-server.sh`
+1. Activate virtual environment
+   - Windows:
+     - `env\Scripts\activate.bat`
+   - Mac:
+     - `source env/bin/activate`
+2. Run Server
+   - Windows:
+     - run `./run-server.bat`
+   - Mac:
+     - run `./run-server.sh`
+3. Stop Server
+   - `ctrl + c`
+4. Deactivate Virtual environment
+   - `deactivate`
+5. Run Migrations
+   - `python3 manage.py makemigrations`
+   - `python3 manage.py showmigrations`
+   - `python3 manage.py migrate`
+6. Run code coverage
+   - Coming soon
 
 ## Getting Started
 
 1. Install Python3 from [here](https://www.python.org/downloads/)
 2. Install `virtualenv` from [here](https://pypi.org/project/virtualenv/) -- this allows us to create a virtual environment which will ensure us to be all using the same packages. Think of it as a simple version of virtual box or docker. So any packages you install (as long as your virtual environment) is activated will only live inside it (if you delete the virtual environment, it'll get deleted as well). This also makes it easy so your computer isn't filled with a bunch of random libraries and junk you won't need :)
-3. Install PostgreSQL from [here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
-   - You can just install all the components
-   - When it asks for password make sure you remember it! We'll be using this for our root access for the db
-   - After installing Postgres, you can just close when it asks if you wanna launch StackBuilder
+3. Install and setup PostgreSQL from [here](https://hashnode.com/post/django-rest-framework-with-postgresql-a-crud-tutorial-ckljp09iz02zb3es17h1h5aou)
+   - Follow the guide until you create a db user
+   - For **Creating a Database** section, use `trojanscheduler` for `mydb`
+   - For **Creating a Database User** section, use `tcss` for `mypw` and whatever password for `password`
 4. Create virtual environment
    - Windows:
      - `python -m venv env`
@@ -32,7 +48,10 @@ Trojan Scheduler lets users input in the classes they're interested in registeri
    - Mac:
      - `source env/bin/activate`
 6. Installing dependencies -- this will install all the dependencies to your virtual environment
-   - `pip install -r requirements.txt`
+   - Windows:
+     - `pip install -r requirements.txt`
+   - Mac:
+     - `pip3 install -r requirements.txt`
 7. Setting up pre-commit
    - run `pre-commit install` to set up git hook scripts
      - what this does is it runs the the scripts specified in `.pre-commit-config.yaml` whenever you commit so it formats the code nice and beautiful so it's consistent across everyone
