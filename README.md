@@ -7,8 +7,11 @@ Trojan Scheduler lets users input in the classes they're interested in registeri
 ## Commands
 
 1. Run Server
-   - run `./run-server.sh` to get your backend running
-   - Note: If you're on Windows, open `run-server.sh` and change from `python3` to `python`
+
+- Windows:
+  - run `./run-server.bat`
+- Mac:
+  - run `./run-server.sh`
 
 ## Getting Started
 
@@ -57,3 +60,47 @@ Frontend: Django HTML
 - [iTerm2](https://iterm2.com/) - A better terminal (Note: Mac OS Only)
 - [Postman](https://www.postman.com/) - Test out APIs
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k) - Makes terminal better (Note: Unix terminals only)
+
+## Resources
+
+Below are some good resources to refer to
+
+### Backend
+
+- [Learn Basic Django](https://docs.djangoproject.com/en/4.0/intro/tutorial01/)
+  - Get started with learning Django
+- [Learn Basic Django REST framework](https://www.django-rest-framework.org/tutorial/quickstart/)
+  - Get started with learning Django REST framework
+- [Two Scoops of Django](resources/Two%20Scoops%20of%20Django.pdf)
+  - Outlines some best practices of Django
+- [Django Documentation](https://docs.djangoproject.com/en/4.0/)
+  - Understand how Django works
+- [Django REST Framework Documentation](https://www.django-rest-framework.org/)
+  - We're gonna be developing our web app using REST practices this allows us to do that. Read more about REST [here](https://en.wikipedia.org/wiki/Representational_state_transfer)
+- [Django Filter](https://django-filter.readthedocs.io/en/latest/)
+  - Lets user to filter the querysets dynamically form
+- [Beautiful Soup](https://beautiful-soup-4.readthedocs.io/en/latest/)
+  - Gonna scrape USC class schedules website with this
+
+### Frontend
+
+- [Django Templates](https://www.geeksforgeeks.org/django-templates/)
+  - We'll be using Django Templates to build out our frontend
+- [Bootstrap](https://getbootstrap.com/)
+  - We're gonna be using bootstrap to help create our frontend
+- [How to Center in CSS](http://howtocenterincss.com/)
+  - nuff said
+- [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+  - In the event you don't wanna use bootstrap
+- Icons
+  - [System UI Icons](https://systemuicons.com/)
+  - [Feather Icons](https://feathericons.com/)
+  - [Bootstrap Icons](https://icons.getbootstrap.com)
+  - [Flat Icons](https://www.flaticon.com/)
+
+### Git
+
+- [Oh Shit, Git!?!](https://ohshitgit.com/)
+  - Common git stuff to undo mistakes
+- [Git Rebase](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
+  - Makes our git flow more linear
