@@ -69,6 +69,8 @@ Below are some good resources to refer to
 
 - [Learn Basic Django](https://docs.djangoproject.com/en/4.0/intro/tutorial01/)
   - Get started with learning Django
+- [Learn Basic Django with Mozilla](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django)
+  - Mozilla's tutorial more comprehensive than Django's tutorial
 - [Learn Basic Django REST framework](https://www.django-rest-framework.org/tutorial/quickstart/)
   - Get started with learning Django REST framework
 - [Two Scoops of Django](resources/Two%20Scoops%20of%20Django.pdf)
