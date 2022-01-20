@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "3427c095-c5c5-4691-b173-5e0855ae60b7",
+		"name": "Trojan Scheduler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sample get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/classes/get_first/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"classes",
+						"get_first",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
