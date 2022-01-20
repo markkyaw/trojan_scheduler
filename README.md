@@ -33,6 +33,10 @@ Note: For all commands, Windows users will use `python` / `pip` while Mac users 
      - this is basically `gdb` equivalent in python. Use this when testing your code as you're developing features/debugging
    - `import sys, pdb; pdb.Pdb(stdout=sys.__stdout__).set_trace()`
      - Use this to debug the test files when test cases are failing
+8. Running Behave Tests
+   - `python3 manage.py behave --keep-db --tags @tag`
+   - `keep-db` uses existing test db instead of your local existing db to run tests. Remove the tag if need to rebuild test db
+   - `tags` lets you run specific tests with whichever tests have the `@` that follows
 
 ## Getting Started
 
@@ -42,6 +46,7 @@ Note: For all commands, Windows users will use `python` / `pip` while Mac users 
    - Follow the guide until you create a db user
    - For **Creating a Database** section, use `trojanscheduler` for `mydb`
    - For **Creating a Database User** section, use `tcss` for `mypw` and whatever password for `password`
+   - After setting up the db, run `ALTER USER <mydb> CREATEDB;` this gives the user we just created to create db so we can create test db for testing purposes without affecting the local db
 4. Create virtual environment
    - Windows:
      - `python -m venv env`
