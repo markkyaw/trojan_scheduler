@@ -66,6 +66,12 @@ Note: For all commands, Windows users will use `python` / `pip` while Mac users 
    - run `pre-commit install` to set up git hook scripts
      - what this does is it runs the the scripts specified in `.pre-commit-config.yaml` whenever you commit so it formats the code nice and beautiful so it's consistent across everyone
    - then run `pre-commit run --all-files` to make sure it works properly
+8. Run initial migrations
+   - Windows:
+     - `python manage.py migrate`
+   - Mac:
+     - `python3 manage.py migrate`
+   - This will migrate existing migrations (tell db on what changes need to be done to the tables/columns)
 
 ## Tech Stack
 
