@@ -1,4 +1,4 @@
-# Trojan Scheduler
+# Trojan Schedule
 
 ## About
 
