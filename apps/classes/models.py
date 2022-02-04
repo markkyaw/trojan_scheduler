@@ -1,5 +1,3 @@
-from curses.ascii import NUL
-
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -37,7 +35,7 @@ class BasicClassInfo(models.Model):
     """
 
     class_code = models.CharField(max_length=100, default=None, null=True)
-    class_section = models.CharField(max_length=200, default=None, null=True)
+    class_number = models.CharField(max_length=200, default=None, null=True)
     year = models.IntegerField()
     semester = models.IntegerField(choices=ClassSemester.choices)
     min_units = models.DecimalField(
@@ -57,34 +55,39 @@ class BasicClassInfo(models.Model):
 
 class BasicClassSection(BasicClassInfo):
     """
-    The model will need to store
-    - Section - from parent
-    - Session - done
-    - Type - done
+    Sample Info.
+    - Class code (INHERITED): CSCI
+    - Number (INHERITED): 270
+    - Section: 41635R
+    - Session: 001
+    - Type: 1 (Lecture)
     - Time
-        - Start time
-        - End time
-    - Days - done
-    - Instructor - done
+        - Start time: 1230PM
+        - End time: 150PM
+    - Days: 1010000 (Translates to: MW)
+    - Instructor: David Kempe
     - Location
-        - Building
-        - Room #
+        - Building: ONLINE
+        - Room #: NULL
 
     Notes:
     - Maybe implement default values for future semesters when not all values have been assigned.
     """
 
+    section = models.CharField(
+        max_length=50,
+    )
     session = models.CharField(
         max_length=3,
     )
-    type = models.IntegerField(choices=SectionType.choices)
+    section_type = models.IntegerField(choices=SectionType.choices)
     start_time = models.TimeField()
     end_time = models.TimeField()
     days = models.CharField(
         max_length=7,
         default="0000000",
     )
-    instructor = models.ManyToManyField(Instructor)
+    instructor = models.ManyToManyField(Instructor, related_name="classes")
     location_building = models.CharField(
         max_length=50,
     )
