@@ -53,11 +53,10 @@ class BasicClassInfo(models.Model):
     description = models.TextField()
 
 
-class BasicClassSection(BasicClassInfo):
+class BasicClassSection(models.Model):
     """
     Sample Info.
-    - Class code (INHERITED): CSCI
-    - Number (INHERITED): 270
+    - Class Info: Foreign key to basic class info object CSCI 270.
     - Section: 41635R
     - Session: 001
     - Type: 1 (Lecture)
@@ -74,6 +73,7 @@ class BasicClassSection(BasicClassInfo):
     - Maybe implement default values for future semesters when not all values have been assigned.
     """
 
+    class_info = models.ForeignKey(BasicClassInfo)
     section = models.CharField(
         max_length=50,
     )
