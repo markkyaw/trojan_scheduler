@@ -73,7 +73,6 @@ class Parser:
     def __parseSections(self, class_info: BeautifulSoup):
         s_table = class_info.select_one("table[class~=sections]")
 
-        # REMOVE ALL APPENDS AFTER TESTING
         for s in s_table.select("tr"):  # Get all the table rows
             if "headers" in s["class"]:  # Skip header row
                 continue
