@@ -15,7 +15,11 @@ class Command(BaseCommand):
         ui_list = ["user1", "user2", "user3", "user4", "user5"]
 
         for user in ui_list:
-            User.objects.create_user(user, user + "@gmail.com", user + "pw")
+            # First see if it already exists. If it does, leave it; if it doesn't, create a new User.
+            try:
+                User.objects.get(username=user)
+            except User.DoesNotExist:
+                User.objects.create_user(user, user + "@gmail.com", user + "pw")
 
         # Populating Instructors.
         instructors_list = {
@@ -26,12 +30,13 @@ class Command(BaseCommand):
             "Aaron Cote": "",
         }
 
-        for key, value in instructors_list:
-            value = Instructor.objects.create(name=key)
+        for key, value in instructors_list.items():
+            obj, created = Instructor.objects.update_or_create(name=key)
+            value = obj
 
         # Populating BasicClassInfos with Spring 2022 classes.
         classinfo_list = {
-            "itp_380": BasicClassInfo.objects.create(
+            "itp_380": BasicClassInfo.objects.update_or_create(
                 class_code="ITP",
                 class_number="380",
                 year=2022,
@@ -39,7 +44,7 @@ class Command(BaseCommand):
                 min_units=4.0,
                 max_units=4.0,
             ),
-            "csci_270": BasicClassInfo.objects.create(
+            "csci_270": BasicClassInfo.objects.update_or_create(
                 class_code="CSCI",
                 class_number="270",
                 year=2022,
@@ -47,7 +52,7 @@ class Command(BaseCommand):
                 min_units=4.0,
                 max_units=4.0,
             ),
-            "ctin_489": BasicClassInfo.objects.create(
+            "ctin_489": BasicClassInfo.objects.update_or_create(
                 class_code="CTIN",
                 class_number="489",
                 year=2022,
@@ -55,7 +60,7 @@ class Command(BaseCommand):
                 min_units=2.0,
                 max_units=2.0,
             ),
-            "ctin_484": BasicClassInfo.objects.create(
+            "ctin_484": BasicClassInfo.objects.update_or_create(
                 class_code="CTIN",
                 class_number="484",
                 year=2022,
@@ -63,7 +68,7 @@ class Command(BaseCommand):
                 min_units=2.0,
                 max_units=2.0,
             ),
-            "js_314": BasicClassInfo.objects.create(
+            "js_314": BasicClassInfo.objects.update_or_create(
                 class_code="JS",
                 class_number="314",
                 year=2022,
@@ -75,7 +80,7 @@ class Command(BaseCommand):
 
         # Populating BasicClassSessions.
         classsections_list = {
-            "itp380_lecture": BasicClassSection.objects.create(
+            "itp380_lecture": BasicClassSection.objects.update_or_create(
                 class_info=classinfo_list.get("itp_380"),
                 section="31908",
                 session="001",
@@ -87,7 +92,7 @@ class Command(BaseCommand):
                 location_building="KAP",
                 location_room="160",
             ),
-            "itp380_lab": BasicClassSection.objects.create(
+            "itp380_lab": BasicClassSection.objects.update_or_create(
                 class_info=classinfo_list.get("itp_380"),
                 section="31908",
                 session="001",
@@ -99,7 +104,7 @@ class Command(BaseCommand):
                 location_building="KAP",
                 location_room="160",
             ),
-            "csci270_lecture": BasicClassSection.objects.create(
+            "csci270_lecture": BasicClassSection.objects.update_or_create(
                 class_info=classinfo_list.get("csci_270"),
                 section="29957",
                 session="001",
@@ -111,7 +116,7 @@ class Command(BaseCommand):
                 location_building="THH",
                 location_room="202",
             ),
-            "csci270_quiz": BasicClassSection.objects.create(
+            "csci270_quiz": BasicClassSection.objects.update_or_create(
                 class_info=classinfo_list.get("csci_270"),
                 section="30224",
                 session="001",
@@ -122,7 +127,7 @@ class Command(BaseCommand):
                 instructor=instructors_list.get("David Matthias Kempe"),
                 location_building="TBA",
             ),
-            "csci270_discussion": BasicClassSection.objects.create(
+            "csci270_discussion": BasicClassSection.objects.update_or_create(
                 class_info=classinfo_list.get("csci_270"),
                 section="30269",
                 session="001",

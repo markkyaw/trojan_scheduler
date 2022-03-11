@@ -26,7 +26,7 @@ class Instructor(models.Model):
 class BasicClassInfo(models.Model):
     """
     class_code: CSCI
-    class_section: 102L
+    class_number: 102L
     year: 2022
     semester: 1
     min_units: 2
@@ -73,7 +73,9 @@ class BasicClassSection(models.Model):
     - Maybe implement default values for future semesters when not all values have been assigned.
     """
 
-    class_info = models.ForeignKey(BasicClassInfo)
+    class_info = models.ForeignKey(
+        BasicClassInfo, related_name="class_section", on_delete=models.CASCADE
+    )
     section = models.CharField(
         max_length=50,
     )
