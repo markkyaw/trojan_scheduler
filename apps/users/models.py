@@ -4,8 +4,6 @@ from django.db import models
 
 from apps.classes.models import BasicClassSection
 
-from ..classes import *
-
 
 # Create your models here.
 class UserInfo(models.Model):
