@@ -1,8 +1,7 @@
+from apps.classes.models import BasicClassSection
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.db import models
-
-from apps.classes.models import BasicClassSection
 
 
 # Create your models here.

@@ -1,6 +1,5 @@
-from rest_framework import serializers
-
 from apps.classes.models import BasicClassInfo
+from rest_framework import serializers
 
 
 class BasicClassInfoSerializer(serializers.ModelSerializer):

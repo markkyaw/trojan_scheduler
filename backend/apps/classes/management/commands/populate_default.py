@@ -1,9 +1,8 @@
 import datetime
 
-from django.core.management.base import BaseCommand
-
 from apps.classes.models import *
 from apps.users.models import *
+from django.core.management.base import BaseCommand
 
 
 class Command(BaseCommand):

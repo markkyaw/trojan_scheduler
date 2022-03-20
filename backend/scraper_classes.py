@@ -1,9 +1,8 @@
 from datetime import time
 
 import requests
-from bs4 import BeautifulSoup
-
 from apps.classes.models import BasicClassInfo, BasicClassSection, Instructor
+from bs4 import BeautifulSoup
 
 
 class Parser:
