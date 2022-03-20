@@ -11,7 +11,7 @@ click==8.0.3
 colorama==0.4.4
 coverage==6.2
 distlib==0.3.4
-Django==4.0
+Django==4.0.3
 django-filter==21.1
 djangorestframework==3.13.1
 enum34==1.1.10
