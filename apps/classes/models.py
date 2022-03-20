@@ -14,6 +14,7 @@ class SectionType(models.IntegerChoices):
     DISCUSSION = 2, _("Discussion")
     LAB = 3, _("Lab")
     QUIZ = 4, _("Quiz")
+    LECTURE_LAB = 5, _("Lecture-Lab")
 
 
 # Create your models here.

@@ -154,3 +154,4 @@ cython_debug/
 secrets.json
 
 .DS_Store
+.vscode
