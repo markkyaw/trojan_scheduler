@@ -1,12 +1,11 @@
 import json
 
+from api.v1.classes.serializers import *
+from apps.classes.models import BasicClassInfo
 from rest_framework import status
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
-from api.v1.classes.serializers import *
-from apps.classes.models import BasicClassInfo
 
 
 class BasicClassInfoView(GenericAPIView):

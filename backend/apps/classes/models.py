@@ -14,6 +14,7 @@ class SectionType(models.IntegerChoices):
     DISCUSSION = 2, _("Discussion")
     LAB = 3, _("Lab")
     QUIZ = 4, _("Quiz")
+    LECTURE_LAB = 5, _("Lecture-Lab")
 
 
 # Create your models here.
@@ -26,7 +27,7 @@ class Instructor(models.Model):
 class BasicClassInfo(models.Model):
     """
     class_code: CSCI
-    class_section: 102L
+    class_number: 102L
     year: 2022
     semester: 1
     min_units: 2
@@ -53,11 +54,10 @@ class BasicClassInfo(models.Model):
     description = models.TextField()
 
 
-class BasicClassSection(BasicClassInfo):
+class BasicClassSection(models.Model):
     """
     Sample Info.
-    - Class code (INHERITED): CSCI
-    - Number (INHERITED): 270
+    - Class Info: Foreign key to basic class info object CSCI 270.
     - Section: 41635R
     - Session: 001
     - Type: 1 (Lecture)
@@ -74,6 +74,9 @@ class BasicClassSection(BasicClassInfo):
     - Maybe implement default values for future semesters when not all values have been assigned.
     """
 
+    class_info = models.ForeignKey(
+        BasicClassInfo, related_name="class_section", on_delete=models.CASCADE
+    )
     section = models.CharField(
         max_length=50,
     )
