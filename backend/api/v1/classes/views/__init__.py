@@ -1,1 +1,1 @@
-from .views import BasicClassInfoView
+from .views import *
